@@ -48,7 +48,7 @@
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
               <div class="col-sm-8">
-                <input name="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                <input name="password" type="text" class="form-control" id="inputPassword3" placeholder="Password">
               </div>
             </div>
             <div class="form-group">
@@ -67,21 +67,76 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             
-            echo "<p class=\"text-center\">" . $username . " " . $password . "</p>";
-        }
+            $query = sprintf("SELECT * FROM users WHERE username = '%s' AND password = '%s';",
+                             $username,
+                             $password);
+          
+            $result = mysqli_query($connection, $query);
+          
+            if ($result->num_rows > 0)
+            {
+                echo "<p class=\"text-center\">Autenticato come <strong>" . $username . "</strong></p>";
+              
+                // ...
+                // $_SESSION['logged_user'] = $username;
+                // ...
+            }
+            else
+            {
+                echo "<p class=\"text-center\">Credenziali errate!</p>";
+            }
       ?>
       
       <hr>
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10">
+        <div class="col-sm-12">
+          <h4>Query Executed:</h4>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="highlight">
+            <pre><?= $query ?></pre>
+          </div>
+        </div>
+      </div>
+      
+      <?php } ?>
+      
+      <hr>
+      <div class="row">
+        <div class="col-sm-12">
           <h4>PHP Code:</h4>
         </div>
       </div>
       
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10">
+        <div class="col-sm-12">
           <div class="highlight">
-            <pre>TODO</pre>
+            <pre>
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$query = sprintf("SELECT * FROM users WHERE username = '%s' AND password = '%s';",
+                 $username,
+                 $password);
+
+$result = mysqli_query($connection, $query);
+
+if ($result->num_rows > 0)
+{
+    echo "Autenticato come " . $username;
+
+    // ...
+    // $_SESSION['logged_user'] = $username;
+    // ...
+}
+else
+{
+    echo "Credenziali errate!";
+}
+            </pre>
           </div>
         </div>
       </div>
