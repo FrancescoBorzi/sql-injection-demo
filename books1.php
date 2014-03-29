@@ -49,6 +49,9 @@
 		<a href="index.php"><h3 class="text-muted">SQL-Injection Demo</h3></a>
       </div>
       
+      <h3 class="text-center"><span class="label label-danger">
+Vulnerable Search</span></h3><br>
+      
       <div class="row">
         <div class="col-sm-10">
           <form class="form-inline" role="form" action="books1.php" method="GET">

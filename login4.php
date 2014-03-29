@@ -49,6 +49,9 @@
 		<a href="index.php"><h3 class="text-muted">SQL-Injection Demo</h3></a>
       </div>
       
+      <h3 class="text-center"><span class="label label-success">
+Secure Numeric Login</span></h3><br>
+      
       <?php
         if ($_GET['attempt'] != 1)
         {
