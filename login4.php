@@ -95,7 +95,7 @@
 
                 if ($result->num_rows > 0)
                 {
-                    echo "<p class=\"text-center\">Autenticato come <strong>" . $client . "</strong></p>";
+                    echo "<p class=\"text-center\">Authenticated as <strong>" . $client . "</strong></p>";
 
                     // ...
                     // $_SESSION['logged_user'] = $client;
@@ -103,12 +103,12 @@
                 }
                 else
                 {
-                    echo "<p class=\"text-center\">Credenziali errate!</p>";
+                    echo "<p class=\"text-center\">Wrong client/PIN combination.</p>";
                 }
             }
             else
             {
-                echo "<p class=\"text-center\">Il codice cliente ed il PIN sono valori numerici!</p>";
+                echo "<p class=\"text-center\">Client ID and PIN must be numeric values.</p>";
             }
       ?>
       
@@ -153,7 +153,7 @@ if (is_numeric($client) && is_numeric($pin))
 
     if ($result->num_rows > 0)
     {
-        echo "Autenticato come " . $client;
+        echo "Authenticated as " . $client;
 
         // ...
         // $_SESSION['logged_user'] = $client;
@@ -161,12 +161,12 @@ if (is_numeric($client) && is_numeric($pin))
     }
     else
     {
-        echo "Credenziali errate!";
+        echo "Wrong client/PIN combination.";
     }
 }
 else
 {
-    echo "Il codice cliente ed il PIN sono valori numerici!";
+    echo "Client ID and PIN must be numeric values.";
 }
             </pre>
           </div>

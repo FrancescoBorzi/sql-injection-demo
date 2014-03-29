@@ -93,7 +93,7 @@
           
             if ($result->num_rows > 0)
             {
-                echo "<p class=\"text-center\">Autenticato come <strong>" . $client . "</strong></p>";
+                echo "<p class=\"text-center\">Authenticated as <strong>" . $client . "</strong></p>";
               
                 // ...
                 // $_SESSION['logged_user'] = $client;
@@ -101,7 +101,7 @@
             }
             else
             {
-                echo "<p class=\"text-center\">Credenziali errate!</p>";
+                echo "<p class=\"text-center\">Wrong client/PIN combination.</p>";
             }
       ?>
       
@@ -144,7 +144,7 @@ $result = mysqli_query($connection, $query);
 
 if ($result->num_rows > 0)
 {
-    echo "Autenticato come " . $client;
+    echo "Authenticated as " . $client;
 
     // ...
     // $_SESSION['logged_user'] = $client;
@@ -152,7 +152,7 @@ if ($result->num_rows > 0)
 }
 else
 {
-    echo "Credenziali errate!";
+    echo "Wrong client/PIN combination.";
 }
             </pre>
           </div>
