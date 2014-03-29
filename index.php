@@ -22,7 +22,7 @@
       <div class="header">
         <div class="header">
         <ul class="nav nav-pills pull-right">
-              <li class="active" class="dropdown">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Standard Login<b class="caret"></b></a>
                 <ul class="nav dropdown-menu">
                   <li><a href="login1.php">Vulnerable</a></li>

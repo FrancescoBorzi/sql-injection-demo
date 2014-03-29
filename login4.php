@@ -24,14 +24,14 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active" class="dropdown">
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Standard Login<b class="caret"></b></a>
             <ul class="nav dropdown-menu">
               <li><a href="login1.php">Vulnerable</a></li>
               <li><a href="login2.php">Secure</a></li>
             </ul>
           </li>
-          <li class="dropdown">
+          <li class="active" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Numeric Login<b class="caret"></b></a>
             <ul class="nav dropdown-menu">
               <li><a href="login3.php">Vulnerable</a></li>
@@ -56,17 +56,17 @@
       
       <div class="row">
         <div class="col-sm-offset-2 col-sm-8">
-          <form class="form-horizontal" role="form" action="login1.php?attempt=1" method="POST">
+          <form class="form-horizontal" role="form" action="login4.php?attempt=1" method="POST">
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+              <label for="inputEmail3" class="col-sm-2 control-label">Client</label>
               <div class="col-sm-8">
-                <input name="username" type="text" class="form-control" id="inputEmail3" placeholder="Username">
+                <input name="client" type="text" class="form-control" id="inputEmail3" placeholder="Your client ID">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <label for="inputPassword3" class="col-sm-2 control-label">PIN</label>
               <div class="col-sm-8">
-                <input name="password" type="text" class="form-control" id="inputPassword3" placeholder="Password">
+                <input name="pin" type="text" class="form-control" id="inputPassword3" placeholder="Your PIN">
               </div>
             </div>
             <div class="form-group">
@@ -82,26 +82,33 @@
         }
         else
         {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            
-            $query = sprintf("SELECT * FROM users WHERE username = '%s' AND password = '%s';",
-                             $username,
-                             $password);
+            $client = $_POST['client'];
+            $pin = $_POST['pin'];
           
-            $result = mysqli_query($connection, $query);
-          
-            if ($result->num_rows > 0)
+            if (is_numeric($client) && is_numeric($pin))
             {
-                echo "<p class=\"text-center\">Autenticato come <strong>" . $username . "</strong></p>";
-              
-                // ...
-                // $_SESSION['logged_user'] = $username;
-                // ...
+                $query = sprintf("SELECT * FROM clients WHERE id = %s AND pin = %s;",
+                                 mysqli_real_escape_string($connection, $client),
+                                 mysqli_real_escape_string($connection, $pin));
+
+                $result = mysqli_query($connection, $query);
+
+                if ($result->num_rows > 0)
+                {
+                    echo "<p class=\"text-center\">Autenticato come <strong>" . $client . "</strong></p>";
+
+                    // ...
+                    // $_SESSION['logged_user'] = $client;
+                    // ...
+                }
+                else
+                {
+                    echo "<p class=\"text-center\">Credenziali errate!</p>";
+                }
             }
             else
             {
-                echo "<p class=\"text-center\">Credenziali errate!</p>";
+                echo "<p class=\"text-center\">Il codice cliente ed il PIN sono valori numerici!</p>";
             }
       ?>
       
@@ -133,26 +140,33 @@
         <div class="col-sm-12">
           <div class="highlight">
             <pre>
-$username = $_POST['username'];
-$password = $_POST['password'];
+$client = $_POST['client'];
+$pin = $_POST['pin'];
 
-$query = sprintf("SELECT * FROM users WHERE username = '%s' AND password = '%s';",
-                 $username,
-                 $password);
-
-$result = mysqli_query($connection, $query);
-
-if ($result->num_rows > 0)
+if (is_numeric($client) && is_numeric($pin))
 {
-    echo "Autenticato come " . $username;
+    $query = sprintf("SELECT * FROM clients WHERE id = %s AND pin = %s;",
+                     mysqli_real_escape_string($connection, $client),
+                     mysqli_real_escape_string($connection, $pin));
 
-    // ...
-    // $_SESSION['logged_user'] = $username;
-    // ...
+    $result = mysqli_query($connection, $query);
+
+    if ($result->num_rows > 0)
+    {
+        echo "Autenticato come " . $client;
+
+        // ...
+        // $_SESSION['logged_user'] = $client;
+        // ...
+    }
+    else
+    {
+        echo "Credenziali errate!";
+    }
 }
 else
 {
-    echo "Credenziali errate!";
+    echo "Il codice cliente ed il PIN sono valori numerici!";
 }
             </pre>
           </div>
