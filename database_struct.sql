@@ -17,8 +17,15 @@ CREATE TABLE IF NOT EXISTS `users` (
 DELETE FROM `users`;
 INSERT INTO `users` (`id`, `username`, `password`) VALUES 
 (1, 'admin', 'pwd1'),
-(2, 'user', 'pwdusr'),
-(3, 'user3', 'pwd-3');
+(2, 'danilo', 'gasd12'),
+(3, 'filippo', 'postuy666'),
+(4, 'oreste', 'tmrchio82'),
+(5, 'luca', 'kd2jam'),
+(6, 'dario', '31lowrem'),
+(7, 'sebastiano', '4muniz4'),
+(8, 'antonio', 'ciuppi75'),
+(9, 'cristina', 'berfectqui2'),
+(10, 'jessica', 'ioryunzfrunz');
 
 
 -- Create `books` table
