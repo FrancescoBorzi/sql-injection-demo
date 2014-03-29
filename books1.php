@@ -75,7 +75,7 @@
 
         while (($row = mysqli_fetch_row($result)) != null)
         {
-            printf ("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", $row[0], $row[1], $row[2]);
+            printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", $row[0], $row[1], $row[2]);
         }
       ?>
       </table>
@@ -106,7 +106,23 @@
         <div class="col-sm-12">
           <div class="highlight">
             <pre>
-TODO
+if ($_GET['all'] == 1)
+{
+    $query = "SELECT * FROM books;";
+}
+else if ($_GET['title'] || $_GET['author'])
+{
+    $query = sprintf("SELECT * FROM books WHERE title = '%s' OR author = '%s';",
+                     $_GET['title'], $_GET['author']);
+}
+
+
+$result = mysqli_query($connection, $query);
+
+while (($row = mysqli_fetch_row($result)) != null)
+{
+    printf("&lt;tr&gt;&lt;td&gt;%s&lt;/td&gt;&lt;td&gt;%s&lt;/td&gt;&lt;td&gt;%s&lt;/td&gt;&lt;/tr&gt;", $row[0], $row[1], $row[2]);
+}
             </pre>
           </div>
         </div>
