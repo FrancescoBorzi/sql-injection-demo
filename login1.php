@@ -24,12 +24,29 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="index.php">Index</a></li>
-          <li class="active"><a href="login1.php">Vulnerable Login</a></li>
-          <li><a href="login2.php">Secure Login</a></li>
-          <li><a href="books1.php">Search</a></li>
-        </ul>
-		<h3 class="text-muted">SQL-Injection Demo</h3>
+              <li class="active" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Standard Login<b class="caret"></b></a>
+                <ul class="nav dropdown-menu">
+                  <li><a href="login1.php">Vulnerable</a></li>
+                  <li><a href="login2.php">Secure</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Numeric Login<b class="caret"></b></a>
+                <ul class="nav dropdown-menu">
+                  <li><a href="login3.php">Vulnerable</a></li>
+                  <li><a href="login4.php">Secure</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<b class="caret"></b></a>
+                <ul class="nav dropdown-menu">
+                  <li><a href="books1.php">Vulnerable</a></li>
+                  <li><a href="books2.php">Secure</a></li>
+                </ul>
+              </li>
+            </ul>
+		<a href="index.php"><h3 class="text-muted">SQL-Injection Demo</h3></a>
       </div>
       
       <?php
@@ -148,6 +165,11 @@ else
       </div>
 
     </div> <!-- /container -->
-	  
+  
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

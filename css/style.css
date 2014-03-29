@@ -24,6 +24,10 @@ body {
   line-height: 40px;
 }
 
+.header a{
+  text-decoration: none;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
