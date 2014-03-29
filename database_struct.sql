@@ -36,5 +36,16 @@ AUTO_INCREMENT=3;
 -- table `books` content
 DELETE FROM `books`;
 INSERT INTO `books` (`id`, `title`, `author`) VALUES 
-(1, 'Libro1', 'Autore1'),
-(2, 'Book', 'Someone');
+(1, 'A Game of Thrones', 'George R. R. Martin'),
+(2, 'A Clash of Kings', 'George R. R. Martin'),
+(3, 'A Storm of Swords', 'George R. R. Martin'),
+(4, 'A Feast for Crows', 'George R. R. Martin'),
+(5, 'A Dance with Dragons', 'George R. R. Martin'),
+(6, 'The Winds of Winter', 'George R. R. Martin'),
+(7, 'A Dream of Spring', 'George R. R. Martin'),
+(8, 'Software libero pensiero libero', 'Richard Stallman'),
+(9, 'Perche\' sono vegetariana', 'Margherita hack'),
+(10, 'Nove vite come i gatti. I miei primi novant\'anni laici e ribelli', 'Margherita hack'),
+(11, 'Stelle da paura. A caccia dei misteri spaventosi del cielo', 'Margherita hack'),
+(12, 'In piena liberta\' e consapevolezza', 'Margherita hack'),
+(13, 'La mia vita in bicicletta', 'Margherita hack');

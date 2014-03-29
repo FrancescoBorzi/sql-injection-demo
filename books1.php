@@ -27,14 +27,14 @@
           <li><a href="index.php">Index</a></li>
           <li><a href="login1.php">Vulnerable Login</a></li>
           <li><a href="login2.php">Secure Login</a></li>
-          <li><a href="books.php" class="active">Books</a></li>
+          <li class="active"><a href="books1.php">Search</a></li>
         </ul>
 		<h3 class="text-muted">SQL-Injection Demo</h3>
       </div>
       
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-12">
-          <form class="form-inline" role="form" action="books.php" method="GET">
+        <div class="col-sm-10">
+          <form class="form-inline" role="form" action="books1.php" method="GET">
             <div class="form-group">
               <label class="sr-only" for="exampleInputEmail2">Book title</label>
               <input type="text" name="title" class="form-control" placeholder="Book title">
@@ -43,9 +43,12 @@
               <label class="sr-only" for="exampleInputPassword2">Book author</label>
               <input type="text" name="author" class="form-control"placeholder="Book author">
             </div>
-            <button type="submit" class="btn btn-default">Search for a book...</button>
+            <button type="submit" class="btn btn-success">Search</button>
           </form>
-        </div>  
+        </div>
+        <div class="col-sm-2">
+          <a href="books1.php?all=1"><button type="button" class="btn btn-info">All books</button></a>
+        </div>
       </div>
       
       <br>
@@ -57,8 +60,16 @@
           <th>Author</th>
         </tr>
       <?php
-        $query = sprintf("SELECT * FROM books WHERE title = '%s' OR author = '%s';",
-            $_GET['title'], $_GET['author']);
+        if ($_GET['all'] == 1)
+        {
+            $query = "SELECT * FROM books;";
+        }
+        else if ($_GET['title'] || $_GET['author'])
+        {
+            $query = sprintf("SELECT * FROM books WHERE title = '%s' OR author = '%s';",
+                             $_GET['title'], $_GET['author']);
+        }
+            
 
         $result = mysqli_query($connection, $query);
 

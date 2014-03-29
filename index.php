@@ -24,6 +24,7 @@
           <li class="active"><a href="index.php">Index</a></li>
           <li><a href="login1.php">Vulnerable Login</a></li>
           <li><a href="login2.php">Secure Login</a></li>
+          <li><a href="books1.php">Search</a></li>
         </ul>
         <h3 class="text-muted">SQL-Injection Demo</h3>
       </div>
