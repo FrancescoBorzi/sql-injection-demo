@@ -16,6 +16,25 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- table `users` content
 DELETE FROM `users`;
 INSERT INTO `users` (`id`, `username`, `password`) VALUES 
-(0000000001, 'admin', 'pwd1'),
-(0000000002, 'user', 'pwdusr'),
-(0000000003, 'user3', 'pwd-3');
+(1, 'admin', 'pwd1'),
+(2, 'user', 'pwdusr'),
+(3, 'user3', 'pwd-3');
+
+
+-- Create `books` table
+DROP TABLE IF EXISTS `books`;
+CREATE TABLE IF NOT EXISTS `books` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(50) NOT NULL DEFAULT '0',
+  `author` VARCHAR(50) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=3;
+
+-- table `books` content
+DELETE FROM `books`;
+INSERT INTO `books` (`id`, `title`, `author`) VALUES 
+(1, 'Libro1', 'Autore1'),
+(2, 'Book', 'Someone');
