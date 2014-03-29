@@ -52,7 +52,21 @@ INSERT INTO `books` (`id`, `title`, `author`) VALUES
 (7, 'A Dream of Spring', 'George R. R. Martin'),
 (8, 'Software libero pensiero libero', 'Richard Stallman'),
 (9, 'Perche\' sono vegetariana', 'Margherita hack'),
-(10, 'Nove vite come i gatti. I miei primi novant\'anni laici e ribelli', 'Margherita hack'),
-(11, 'Stelle da paura. A caccia dei misteri spaventosi del cielo', 'Margherita hack'),
+(10, 'I miei primi novant\'anni laici e ribelli', 'Margherita hack'),
+(11, 'A caccia dei misteri spaventosi del cielo', 'Margherita hack'),
 (12, 'In piena liberta\' e consapevolezza', 'Margherita hack'),
 (13, 'La mia vita in bicicletta', 'Margherita hack');
+
+-- Create `clients` table
+DROP TABLE IF EXISTS `clients`;
+CREATE TABLE IF NOT EXISTS `clients` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pin` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=latin1;
+
+-- table `clients` content
+DELETE FROM `clients`;
+INSERT INTO `clients` (`id`, `pin`) VALUES
+(110, 123456789),
+(111, 432342198);
