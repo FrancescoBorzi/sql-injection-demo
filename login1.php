@@ -162,6 +162,23 @@ else
         </div>
       </div>
       
+      <hr>
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>Vulnerability:</h4>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="highlight">
+            <pre>
+Pass <strong>1' OR '1'='1</strong> as password to get authenticated.
+            </pre>
+          </div>
+        </div>
+      </div>
+      
       <br>
       <div class="footer">
         <p></p>Francesco Borzì - Computer Security Project</p>

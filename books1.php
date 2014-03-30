@@ -148,6 +148,23 @@ while (($row = mysqli_fetch_row($result)) != null)
         </div>
       </div>
       
+       <hr>
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>Vulnerability:</h4>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="highlight">
+            <pre>
+Pass <strong>' UNION SELECT * FROM users WHERE '1'='1</strong> as author to get all users data.
+            </pre>
+          </div>
+        </div>
+      </div>
+      
       <br>
       <div class="footer">
         <p></p>Francesco Borzì - Computer Security Project</p>
