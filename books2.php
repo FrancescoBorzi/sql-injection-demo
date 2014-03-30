@@ -90,13 +90,15 @@ Secure Search</span></h3><br>
                              mysqli_real_escape_string($_GET['title']), mysqli_real_escape_string($_GET['author']));
         }
             
+        if ($query != null)
+		{
+			$result = mysqli_query($connection, $query);
 
-        $result = mysqli_query($connection, $query);
-
-        while (($row = mysqli_fetch_row($result)) != null)
-        {
-            printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", $row[0], $row[1], $row[2]);
-        }
+			while (($row = mysqli_fetch_row($result)) != null)
+			{
+				printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", $row[0], $row[1], $row[2]);
+			}
+		}
       ?>
       </table>
       
@@ -136,12 +138,14 @@ else if ($_GET['title'] || $_GET['author'])
                      mysqli_real_escape_string($_GET['title']), mysqli_real_escape_string($_GET['author']));
 }
 
-
-$result = mysqli_query($connection, $query);
-
-while (($row = mysqli_fetch_row($result)) != null)
+if ($query != null)
 {
-    printf("&lt;tr&gt;&lt;td&gt;%s&lt;/td&gt;&lt;td&gt;%s&lt;/td&gt;&lt;td&gt;%s&lt;/td&gt;&lt;/tr&gt;", $row[0], $row[1], $row[2]);
+	$result = mysqli_query($connection, $query);
+
+	while (($row = mysqli_fetch_row($result)) != null)
+	{
+		printf("&lt;tr&gt;&lt;td&gt;%s&lt;/td&gt;&lt;td&gt;%s&lt;/td&gt;&lt;td&gt;%s&lt;/td&gt;&lt;/tr&gt;", $row[0], $row[1], $row[2]);
+	}
 }
             </pre>
           </div>
