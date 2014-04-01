@@ -46,7 +46,7 @@
             </ul>
           </li>
         </ul>
-		<a href="index.php"><h3 class="text-muted">SQL-Injection Demo</h3></a>
+		<h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
       </div>
       
       <h3 class="text-center"><span class="label label-success">
