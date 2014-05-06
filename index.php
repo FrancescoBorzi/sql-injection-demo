@@ -16,7 +16,7 @@
   <body>
 
     <div class="container">
-      <div class="header">
+      <div class="header hidden-xs">
         <ul class="nav nav-pills pull-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Standard Login<b class="caret"></b></a>
@@ -42,6 +42,7 @@
         </ul>
         <h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
       </div>
+      <?php include("mobile-navbar.php") ?>
 
       <div class="jumbotron">
         <h1>SQL Injection</h1>
