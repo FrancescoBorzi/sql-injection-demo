@@ -65,6 +65,7 @@ Secure Search</span></h3><br>
           </form>
         </div>
         <div class="col-sm-2">
+          <span class="visible-xs">&nbsp;</span>
           <a href="books2.php?all=1"><button type="button" class="btn btn-info">All books</button></a>
         </div>
       </div>

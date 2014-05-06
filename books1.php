@@ -65,6 +65,7 @@ Vulnerable Search</span></h3><br>
           </form>
         </div>
         <div class="col-sm-2">
+          <span class="visible-xs">&nbsp;</span>
           <a href="books1.php?all=1"><button type="button" class="btn btn-info">All books</button></a>
         </div>
       </div>
@@ -174,10 +175,7 @@ The same result is obtained by using url <a href="books1.php?author='+UNION+SELE
       </div>
 
     </div> <!-- /container -->
-	  
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
