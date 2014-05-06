@@ -17,47 +17,46 @@
 
     <div class="container">
       <div class="header">
-        <div class="header">
         <ul class="nav nav-pills pull-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Standard Login<b class="caret"></b></a>
-                <ul class="nav dropdown-menu">
-                  <li><a href="login1.php">Vulnerable</a></li>
-                  <li><a href="login2.php">Secure</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Numeric Login<b class="caret"></b></a>
-                <ul class="nav dropdown-menu">
-                  <li><a href="login3.php">Vulnerable</a></li>
-                  <li><a href="login4.php">Secure</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<b class="caret"></b></a>
-                <ul class="nav dropdown-menu">
-                  <li><a href="books1.php">Vulnerable</a></li>
-                  <li><a href="books2.php">Secure</a></li>
-                </ul>
-              </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Standard Login<b class="caret"></b></a>
+            <ul class="nav dropdown-menu">
+              <li><a href="login1.php">Vulnerable</a></li>
+              <li><a href="login2.php">Secure</a></li>
             </ul>
-		<h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Numeric Login<b class="caret"></b></a>
+            <ul class="nav dropdown-menu">
+              <li><a href="login3.php">Vulnerable</a></li>
+              <li><a href="login4.php">Secure</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<b class="caret"></b></a>
+            <ul class="nav dropdown-menu">
+              <li><a href="books1.php">Vulnerable</a></li>
+              <li><a href="books2.php">Secure</a></li>
+            </ul>
+          </li>
+        </ul>
+        <h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
       </div>
-		
-	<div class="jumbotron">
+
+      <div class="jumbotron">
         <h1>SQL Injection</h1>
-		<h2>Demostration Project</h2>
+        <h2>Demostration Project</h2>
         <h3>The code of this demo is available at:</h3>
         <h2><a href="https://github.com/ShinDarth/sql-injection-demo">github.com/ShinDarth/sql-injection-demo</a></h2>
       </div>
-		
+
       <div class="footer">
         <p></p>Francesco Borzì - Computer Security Project</p>
-      </div>
+    </div>
 
-    </div> <!-- /container -->
+  </div> <!-- /container -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>	  
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
 </html>
