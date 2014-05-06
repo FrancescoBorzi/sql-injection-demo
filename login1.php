@@ -12,10 +12,7 @@
 
     <title>SQL Injection Demo</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -185,10 +182,7 @@ Pass <strong>1' OR '1'='1</strong> as password to get authenticated.
       </div>
 
     </div> <!-- /container -->
-  
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
