@@ -42,7 +42,7 @@
         </ul>
         <h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
       </div>
-      <?php include("mobile-navbar.php") ?>
+      <?php include("mobile-navbar.php"); ?>
 
       <div class="jumbotron">
         <h1>SQL Injection</h1>

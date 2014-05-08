@@ -45,7 +45,7 @@
         </ul>
 		<h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
       </div>
-      <?php include("mobile-navbar.php") ?>
+      <?php include("mobile-navbar.php"); ?>
       
       <h3 class="text-center"><span class="label label-success">
 Secure Standard Login</span></h3><br>
