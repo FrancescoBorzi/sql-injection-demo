@@ -28,7 +28,7 @@
               <li><a href="login2.php">Secure</a></li>
             </ul>
           </li>
-          <li class="active" class="dropdown">
+          <li class="active dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Numeric Login<b class="caret"></b></a>
             <ul class="nav dropdown-menu">
               <li><a href="login3.php">Vulnerable</a></li>
