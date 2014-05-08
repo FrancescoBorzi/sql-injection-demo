@@ -31,6 +31,12 @@
                 <li><a href="books2.php" style="color: #5CB85C;">Secure</a></li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<b class="caret"></b></a>
+              <ul class="nav dropdown-menu">
+                <li><a href="regexp.php" style="color: #369;">Regular Expression Checker</a></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

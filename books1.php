@@ -42,6 +42,12 @@
               <li><a href="books2.php">Secure</a></li>
             </ul>
           </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<b class="caret"></b></a>
+            <ul class="nav dropdown-menu">
+              <li><a href="regexp.php">Regular Expression Checker</a></li>
+            </ul>
+          </li>
         </ul>
 		<h3 class="text-muted"><a href="index.php">SQL-Injection Demo</a></h3>
       </div>

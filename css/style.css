@@ -81,3 +81,8 @@ body {
     border-bottom: 0;
   }
 }
+
+.nonclickable {
+  pointer-events: none;
+  cursor: not-allowed;
+}
