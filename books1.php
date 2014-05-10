@@ -92,7 +92,8 @@ Vulnerable Search</span></h3><br>
         else if ($_GET['title'] || $_GET['author'])
         {
             $query = sprintf("SELECT * FROM books WHERE title = '%s' OR author = '%s';",
-                             $_GET['title'], $_GET['author']);
+                             $_GET['title'],
+                             $_GET['author']);
         }
             
 		if ($query != null)
@@ -140,7 +141,8 @@ if ($_GET['all'] == 1)
 else if ($_GET['title'] || $_GET['author'])
 {
     $query = sprintf("SELECT * FROM books WHERE title = '%s' OR author = '%s';",
-                     $_GET['title'], $_GET['author']);
+                             $_GET['title'],
+                             $_GET['author']);
 }
 
 if ($query != null)
