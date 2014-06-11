@@ -52,7 +52,7 @@
 
       <div class="jumbotron">
         <h1>SQL Injection</h1>
-        <h2>Demostration Project</h2>
+        <h2>Demonstration Project</h2>
         <h3>The code of this demo is available at:</h3>
         <h2 class="hidden-xs"><a href="https://github.com/ShinDarth/sql-injection-demo">github.com/ShinDarth/sql-injection-demo</a></h2>
         <p class="lead visible-xs"><a href="https://github.com/ShinDarth/sql-injection-demo">github.com/ShinDarth/sql-injection-demo</a></p>
