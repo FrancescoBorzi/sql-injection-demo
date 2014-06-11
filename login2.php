@@ -167,9 +167,8 @@ else
       </div>
       
       <br>
-      <div class="footer">
-        <p></p>Francesco Borzì - Computer Security Project</p>
-      </div>
+
+      <?php include("footer.php"); ?>
 
     </div> <!-- /container -->
 

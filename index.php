@@ -58,13 +58,11 @@
         <p class="lead visible-xs"><a href="https://github.com/ShinDarth/sql-injection-demo">github.com/ShinDarth/sql-injection-demo</a></p>
       </div>
 
-      <div class="footer">
-        <p></p>Francesco Borzì - Computer Security Project</p>
-    </div>
+      <?php include("footer.php"); ?>
 
-  </div> <!-- /container -->
+    </div> <!-- /container -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

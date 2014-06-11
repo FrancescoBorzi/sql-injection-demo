@@ -184,9 +184,8 @@ Pass <strong>1' OR '1'='1</strong> as password to get authenticated.
       </div>
       
       <br>
-      <div class="footer">
-        <p></p>Francesco Borzì - Computer Security Project</p>
-      </div>
+
+      <?php include("footer.php"); ?>
 
     </div> <!-- /container -->
 

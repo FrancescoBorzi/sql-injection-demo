@@ -178,9 +178,8 @@ Regular expression <strong>/^[a-z]{2,4}+[0-9]{2}$/</strong> matches strings that
       </div>
 
       <br>
-      <div class="footer">
-        <p></p>Francesco Borzì - Computer Security Project</p>
-    </div>
+
+      <?php include("footer.php"); ?>
 
   </div> <!-- /container -->
 

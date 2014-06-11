@@ -178,9 +178,8 @@ The same result is obtained by using url <a href="books1.php?author='+UNION+SELE
       </div>
       
       <br>
-      <div class="footer">
-        <p></p>Francesco Borzì - Computer Security Project</p>
-      </div>
+
+      <?php include("footer.php"); ?>
 
     </div> <!-- /container -->
 
